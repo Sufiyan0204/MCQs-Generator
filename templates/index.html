@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    /* Apply styles to the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Center the form container */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+}
+
+/* Style the heading */
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Form styling */
+.form-group {
+    margin: 15px 0;
+    text-align: left;
+}
+
+/* Label styling */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Input field styling */
+input[type="file"], 
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit button styling */
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #218838;
+}
+</style>
+
+
+<body>
+    <div class="container">
+        <h1>Farhan's MCQs Generator</h1>
+        <form action="/generate" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Upload the file</label>
+                <input type="file" name="file" required>
+            </div>
+            <div class="form-group">
+                <label for="number_of_questions">How many Questions Needed</label>
+                <input type="number" name="number_of_questions" min="1" required>
+            </div>
+            <button type="submit">Generate MCQs</button>
+        </form>
+    </div>
+</body>
+
+
+</html>
